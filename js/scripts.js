@@ -1,12 +1,13 @@
-var queenAttack = function(queen, enemy) {
-
+var coinCombo = function(cents) {
+  // var cents = 1;
+  return cents + " Penny";
 };
 
 $(document).ready(function() {
-    $("form#coords").submit(function(event) {
+    $("form#cents").submit(function(event) {
 
 
-    
+
 
     event.preventDefault();
     });
