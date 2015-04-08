@@ -14,9 +14,6 @@
   </header>
   <div class="container">
 
-
-
-
     <div class="row">
 
       <div class="col-md-6">
@@ -30,16 +27,17 @@
             <button type="submit" class="btn btn-info">
               <span class="glyphicon glyphicon-usd"></span> Find out!
             </button>
-            <button type="submit" class="btn btn-danger">
+            <button id="clear" type="submit" class="btn btn-danger">
               <span class="glyphicon glyphicon-remove"></span> Clear
             </button>
           </div>
         </form>
-
-
-
+        <br>
+        <div id="error">
+          <h2 class="text-danger"> !--Error, invalid input--! </h2>
+        </div>
         <div id="result">
-          <p>The queen can<span class="not"></span> attavk yo playah.</p>
+          <h3>Your change will be <span class="coins"></span>, now pay up.</h3>
         </div>
       </div>
     </div>

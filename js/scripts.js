@@ -24,10 +24,56 @@ var coinCombo = function(cents) {
 
 $(document).ready(function() {
     $("form#coin-combo").submit(function(event) {
-      alert("doo doo");
+      var cents = $("input#cents").val();
 
+      var result = coinCombo(cents);
+
+      var pennies = result[0];
+      var nickles = result[1];
+      var dimes = result[2];
+      var quarters = result[3];
+
+      var change = [];
+
+
+      if (quarters != 0) {
+        change.push(quarters + " quarters");
+      }
+      if (dimes != 0) {
+        change.push(dimes + " dimes");
+      }
+      if (nickles != 0) {
+        change.push(nickles + " nickles");
+      }
+      if (pennies != 0) {
+        change.push(pennies + " pennies");
+      }
+      if (change.length == 0) {
+        $("#error").show();
+        $("#result").hide();
+      }
+
+      else {
+      var string = change.join(", ");
+      $("#result").show();
+      $("#error").hide();
+      }
+
+
+
+
+
+    $(".coins").text(string);
 
 
     event.preventDefault();
+    });
+
+    $("#clear").click(function(event) {
+      $("#result").hide();
+      $("#error").hide();
+      $("#cents").val("").focus();
+
+      event.preventDefault();
     });
 });
