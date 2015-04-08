@@ -1,5 +1,20 @@
 body {
-    background-color: #009999;
+    background-color: snow;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 25px;
+  padding: 25px 0;
+  background: url('http://jamiemcintyre.com/wp-content/uploads/2012/05/coin-stack.jpg') no-repeat;
+  background-size: 100% ;
+
+}
+
+h1 {
+  color: white;
+  text-shadow: 1px 1px 4px #000;
+  margin-top: 0;
 }
 
 #result {
